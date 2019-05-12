@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "jest": {
+    "transformIgnorePatterns": ["/node_modules/"]
+  },
   "scripts": {
     "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-jest": "^24.8.0",
     "jest": "^24.8.0"
   }
 }
