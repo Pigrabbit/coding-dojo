@@ -22,31 +22,29 @@ class ListNode {
 }
 
 const addTwoNumbers = (list1, list2) => {
+    let sum = list1.val + list2.val
+    let resultNode = new ListNode(sum)
     if (list1.next && list2.next) {
-        addTwoNumbers(list1.next, list2.next)
+        resultNode.next = addTwoNumbers(list1.next, list2.next)
     } else if (list1.next && !list2.next) {
-
+        resultNode.next = list1.next
     } else if (!list1.next && list2.next) {
-
-    } else {
-        let sum = list1.val + list2.val
-        let resultNode = new ListNode()
-        if (sum >= 10) {
-            sum = sum % 10
-            resultNode.val = sum
-            resultNode.next = new ListNode(1)
-        } else {
-            resultNode.val = sum
-        }
-
-        return resultNode
+        resultNode.next = list2.next
     }
+
+    return adder(resultNode)
 }
 
-let list1 = new ListNode(9)
-console.log(list1)
+const adder = (listNode) => {
+    if (listNode.val >= 10) {
+        listNode.val %= 10
 
-let list2 = new ListNode(3)
-console.log(list2)
-
-console.log(addTwoNumbers(list1, list2))
+        if (listNode.next) {
+            listNode.next.val += 1
+            listNode.next = adder(listNode.next)
+        } else {
+            listNode.next = new ListNode(1)
+        }
+    }
+    return listNode
+}
