@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28669808-9395-4957-a935-76958ac02f70" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/longestCommonPrefix.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/longestCommonPrefix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/longestCommonPrefix.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/longestCommonPrefix.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/romanToInteger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/romanToInteger.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,24 +19,12 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/longestCommonPrefix.js">
+            <entry file="file://$PROJECT_DIR$/src/romanToInteger.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="70" lean-forward="true" selection-start-line="18" selection-end-line="70" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="171">
-                  <caret line="1248" column="4" selection-start-line="1248" selection-start-column="4" selection-end-line="1248" selection-end-column="4" />
+                <state relative-caret-position="538">
+                  <caret line="58" selection-end-line="61" />
                 </state>
               </provider>
             </entry>
@@ -44,10 +34,13 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/test/longestCommonPrefix.test.js">
+            <entry file="file://$PROJECT_DIR$/test/romanToInteger.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="432">
-                  <caret line="47" column="57" lean-forward="true" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+                <state relative-caret-position="440">
+                  <caret line="88" column="57" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -85,6 +78,8 @@
         <option value="$PROJECT_DIR$/src/LongestCommonPrefix.js" />
         <option value="$PROJECT_DIR$/test/longestCommonPrefix.test.js" />
         <option value="$PROJECT_DIR$/src/longestCommonPrefix.js" />
+        <option value="$PROJECT_DIR$/test/romanToInteger.test.js" />
+        <option value="$PROJECT_DIR$/src/romanToInteger.js" />
       </list>
     </option>
   </component>
@@ -162,18 +157,18 @@
       <workItem from="1557450102343" duration="4000" />
       <workItem from="1557497618474" duration="3614000" />
       <workItem from="1557664223515" duration="8740000" />
-      <workItem from="1557842705189" duration="12321000" />
+      <workItem from="1557842705189" duration="15166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27146000" />
+    <option name="totallyTimeSpent" value="29991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15551537" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.15551537" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -187,7 +182,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.34152046" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2877193" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -287,6 +282,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/longestCommonPrefix.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/longestCommonPrefix.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -294,13 +299,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/longestCommonPrefix.js">
+    <entry file="file://$PROJECT_DIR$/test/romanToInteger.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="70" lean-forward="true" selection-start-line="18" selection-end-line="70" />
+        <state relative-caret-position="440">
+          <caret line="88" column="57" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/romanToInteger.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="58" selection-end-line="61" />
         </state>
       </provider>
     </entry>
