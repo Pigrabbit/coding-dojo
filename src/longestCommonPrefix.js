@@ -17,22 +17,55 @@
  */
 
 const longestCommonPrefix = (strs) => {
-    let resultPrefix = ''
-    let prefixQueue = []
+    let shortestLength = shortestWordLength(strs)
+    if (shortestLength === 0) {
+        return ''
+    }
 
+    let resultPrefix = ''
+    let strArrays = []
     strs.forEach((str) => {
-        prefixQueue.push(str[0])
+        strArrays.push(str.split(''))
     })
 
-    for (let i = 0; i < prefixQueue.length - 1; i ++) {
-        if (prefixQueue[i] !== prefixQueue[i + 1]) {
-            return resultPrefix
+    for (let i = 0; i < shortestLength; i++) {
+        if (!hasCommon((strArrays))) {
+            break
+        }
+        resultPrefix += strArrays[0][0]
+
+        strArrays.forEach((strArray) => {
+            strArray.shift()
+        })
+    }
+
+    return resultPrefix
+}
+
+const shortestWordLength = (strs) => {
+    let lengths = []
+    strs.forEach((strs) => {
+        lengths.push(strs.length)
+    })
+
+    return lengths.sort()[0]
+}
+
+const hasCommon = (strArrays) => {
+    let prefixArray = []
+    let numberOfStr = strArrays.length
+
+    strArrays.forEach((strArray) => {
+        prefixArray.push(strArray[0])
+    })
+
+    for (let i = 0; i < numberOfStr - 1; i ++) {
+        if (prefixArray[i] !== prefixArray[i + 1]) {
+            return false
         }
     }
 
-    resultPrefix = prefixQueue.pop()
-
-    return resultPrefix
+    return true
 }
 
 module.exports = longestCommonPrefix
