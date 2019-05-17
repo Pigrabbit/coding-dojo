@@ -1,25 +1,4 @@
-class ListNode {
-    constructor(val) {
-        this._val = val
-        this._next = null
-    }
-
-    get val() {
-        return this._val
-    }
-
-    set val(newValue) {
-        this._val = newValue
-    }
-
-    get next() {
-        return this._next
-    }
-
-    set next(nextNode) {
-        this._next = nextNode
-    }
-}
+const ListNode = require('../src/linkedListNode')
 
 const addTwoNumbers = (list1, list2) => {
     let sum = list1.val + list2.val
