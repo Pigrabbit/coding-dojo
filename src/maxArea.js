@@ -1,27 +1,20 @@
 const maxArea = (heights) => {
-    let area = []
+    let max = 0
+    let head = 0
+    let tail = heights.length - 1
 
-    for (let i = 0; i < heights.length; i++) {
-        let width = 1
-        let height = heights[i]
-        let tmp = heights.filter(element => element >= heights[i])
-        if (tmp.length) {
-            let widths = []
-            tmp.forEach(element => {
-                let possibleWidth1 = Math.abs(heights.indexOf(element) - i)
-                let possibleWidth2 = Math.abs(heights.lastIndexOf(element) - i)
-                if (possibleWidth1 === possibleWidth2) {
-                    widths.push(Math.abs(possibleWidth1))
-                } else {
-                    widths.push(Math.max(possibleWidth1, possibleWidth2))
-                }
-            })
-            width = Math.max(...widths)
+    while (head < tail) {
+        let tmp = Math.min(heights[head], heights[tail]) * (tail - head)
+        max = Math.max(max, tmp)
+
+        if (heights[head] < heights[tail]) {
+            head ++
+        } else {
+            tail --
         }
-        area.push(width * height)
     }
 
-    return Math.max(...area)
+    return max
 }
 
 module.exports = maxArea
