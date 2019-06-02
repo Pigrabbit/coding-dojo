@@ -30,7 +30,7 @@ describe('sortArrayByParity', () => {
     describe('does not have other parity number at right next index', () => {
         const exmapleInput = [3, 5, 6, 2]
         it('need to find proper element at the next closest index',  () => {
-            expect(sortArrayByParity(exmapleInput)).toEqual([6, 5, 3, 2])
+            expect(sortArrayByParity(exmapleInput)).toEqual([6, 5, 2, 3])
         })
     })
 })
