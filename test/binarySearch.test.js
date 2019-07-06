@@ -11,7 +11,7 @@ describe('binary search', () => {
     })
 
     describe('Given a sorted integer array and a target value', () => {
-        nums = [-1,0,3,5,9,12]
+        const nums = [-1,0,3,5,9,12]
         const target = 2
 
         it('If target does not exist, return -1', () => {
