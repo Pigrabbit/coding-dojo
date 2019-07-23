@@ -17,55 +17,55 @@
  */
 
 const longestCommonPrefix = (strs) => {
-    let shortestLength = shortestWordLength(strs)
-    if (shortestLength === 0) {
-        return ''
+  const shortestLength = shortestWordLength(strs);
+  if (shortestLength === 0) {
+    return '';
+  }
+
+  let resultPrefix = '';
+  const strArrays = [];
+  strs.forEach((str) => {
+    strArrays.push(str.split(''));
+  });
+
+  for (let i = 0; i < shortestLength; i++) {
+    if (!hasCommon((strArrays))) {
+      break;
     }
-
-    let resultPrefix = ''
-    let strArrays = []
-    strs.forEach((str) => {
-        strArrays.push(str.split(''))
-    })
-
-    for (let i = 0; i < shortestLength; i++) {
-        if (!hasCommon((strArrays))) {
-            break
-        }
-        resultPrefix += strArrays[0][0]
-
-        strArrays.forEach((strArray) => {
-            strArray.shift()
-        })
-    }
-
-    return resultPrefix
-}
-
-const shortestWordLength = (strs) => {
-    let lengths = []
-    strs.forEach((strs) => {
-        lengths.push(strs.length)
-    })
-
-    return lengths.sort()[0]
-}
-
-const hasCommon = (strArrays) => {
-    let prefixArray = []
-    let numberOfStr = strArrays.length
+    resultPrefix += strArrays[0][0];
 
     strArrays.forEach((strArray) => {
-        prefixArray.push(strArray[0])
-    })
+      strArray.shift();
+    });
+  }
 
-    for (let i = 0; i < numberOfStr - 1; i ++) {
-        if (prefixArray[i] !== prefixArray[i + 1]) {
-            return false
-        }
+  return resultPrefix;
+};
+
+const shortestWordLength = (strs) => {
+  const lengths = [];
+  strs.forEach((strs) => {
+    lengths.push(strs.length);
+  });
+
+  return lengths.sort()[0];
+};
+
+const hasCommon = (strArrays) => {
+  const prefixArray = [];
+  const numberOfStr = strArrays.length;
+
+  strArrays.forEach((strArray) => {
+    prefixArray.push(strArray[0]);
+  });
+
+  for (let i = 0; i < numberOfStr - 1; i++) {
+    if (prefixArray[i] !== prefixArray[i + 1]) {
+      return false;
     }
+  }
 
-    return true
-}
+  return true;
+};
 
-module.exports = longestCommonPrefix
+module.exports = longestCommonPrefix;

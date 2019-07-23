@@ -5,13 +5,13 @@
  */
 
 const twoSum = (numbers, target) => {
-    for (let i = 0; i < numbers.length; i++) {
-        let rightPair = target - numbers[i]
-        if (numbers.includes(rightPair) && numbers.indexOf(rightPair) !== i) {
-            return [i, numbers.indexOf(rightPair)]
-        }
+  for (let i = 0; i < numbers.length; i++) {
+    const rightPair = target - numbers[i];
+    if (numbers.includes(rightPair) && numbers.indexOf(rightPair) !== i) {
+      return [i, numbers.indexOf(rightPair)];
     }
-    return 'wrong input numbers or target'
-}
+  }
+  return 'wrong input numbers or target';
+};
 
-module.exports = twoSum
+module.exports = twoSum;

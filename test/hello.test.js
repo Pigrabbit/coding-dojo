@@ -1,7 +1,7 @@
-const hello = require('../src/hello')
+const hello = require('../src/hello');
 
 describe('hello', () => {
-    it('returns Hello World!', () => {
-        expect(hello()).toEqual('Hello World!')
-    })
-})
+  it('returns Hello World!', () => {
+    expect(hello()).toEqual('Hello World!');
+  });
+});

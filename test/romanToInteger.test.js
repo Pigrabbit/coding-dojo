@@ -1,67 +1,67 @@
-const romanToInteger = require('../src/romanToInteger')
+const romanToInteger = require('../src/romanToInteger');
 
 describe('romanToInteger', () => {
-    describe('with input I', () => {
-        const romanNum = 'I'
+  describe('with input I', () => {
+    const romanNum = 'I';
 
-        it('returns 1', () => {
-            expect(romanToInteger(romanNum)).toEqual(1)
-        })
-    })
+    it('returns 1', () => {
+      expect(romanToInteger(romanNum)).toEqual(1);
+    });
+  });
 
-    describe('with input III', () => {
-        const romanNum = 'III'
+  describe('with input III', () => {
+    const romanNum = 'III';
 
-        it('returns 3', () => {
-            expect(romanToInteger(romanNum)).toEqual(3)
-        })
-    })
+    it('returns 3', () => {
+      expect(romanToInteger(romanNum)).toEqual(3);
+    });
+  });
 
-    describe('with input IV', () => {
-        const romanNum = 'IV'
+  describe('with input IV', () => {
+    const romanNum = 'IV';
 
-        it('returns 4', () => {
-            expect(romanToInteger(romanNum)).toEqual(4)
-        })
-    })
+    it('returns 4', () => {
+      expect(romanToInteger(romanNum)).toEqual(4);
+    });
+  });
 
-    describe('with input V', () => {
-        const romanNum = 'V'
+  describe('with input V', () => {
+    const romanNum = 'V';
 
-        it('returns 5', () => {
-            expect(romanToInteger(romanNum)).toEqual(5)
-        })
-    })
+    it('returns 5', () => {
+      expect(romanToInteger(romanNum)).toEqual(5);
+    });
+  });
 
-    describe('with input IX', () => {
-        const romanNum = 'IX'
+  describe('with input IX', () => {
+    const romanNum = 'IX';
 
-        it('returns 9', () => {
-            expect(romanToInteger(romanNum)).toEqual(9)
-        })
-    })
+    it('returns 9', () => {
+      expect(romanToInteger(romanNum)).toEqual(9);
+    });
+  });
 
-    describe('with input X', () => {
-        const romanNum = 'X'
+  describe('with input X', () => {
+    const romanNum = 'X';
 
-        it('returns 10', () => {
-            expect(romanToInteger(romanNum)).toEqual(10)
-        })
-    })
+    it('returns 10', () => {
+      expect(romanToInteger(romanNum)).toEqual(10);
+    });
+  });
 
-    describe('with Input: "LVIII"', () => {
-        const romanNum = 'LVIII'
+  describe('with Input: "LVIII"', () => {
+    const romanNum = 'LVIII';
 
-        it('returns Output: 58', () => {
-            expect(romanToInteger(romanNum)).toEqual(58)
-        })
-    })
+    it('returns Output: 58', () => {
+      expect(romanToInteger(romanNum)).toEqual(58);
+    });
+  });
 
-    describe('with Input: MCMXCIV', () => {
-        const romanNum = 'MCMXCIV'
+  describe('with Input: MCMXCIV', () => {
+    const romanNum = 'MCMXCIV';
 
-        it('returns Output: 1994', () => {
-            expect(romanToInteger(romanNum)).toEqual(1994)
-        })
-    })
-})
+    it('returns Output: 1994', () => {
+      expect(romanToInteger(romanNum)).toEqual(1994);
+    });
+  });
+});

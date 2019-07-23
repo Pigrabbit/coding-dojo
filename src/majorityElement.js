@@ -2,29 +2,28 @@
  * @param {number[]} nums
  * @return {number}
  */
-const majorityElement = nums => {
-    let countingNumbers = new Map()
+const majorityElement = (nums) => {
+  const countingNumbers = new Map();
 
-    nums.forEach(number => {
-        if (!countingNumbers.get(number)) {
-            countingNumbers.set(number, 1)
-        } else {
-            let i = countingNumbers.get(number)
-            countingNumbers.set(number, i + 1)
-        }
-    })
-
-    let maxCount = Math.max(...countingNumbers.values())
-    let majorityElement = -1
-
-    for (const k of countingNumbers.keys()) {
-        if (countingNumbers.get(k) === maxCount) {
-            majorityElement = k
-        }
-
+  nums.forEach((number) => {
+    if (!countingNumbers.get(number)) {
+      countingNumbers.set(number, 1);
+    } else {
+      const i = countingNumbers.get(number);
+      countingNumbers.set(number, i + 1);
     }
+  });
 
-    return majorityElement
-}
+  const maxCount = Math.max(...countingNumbers.values());
+  let majorityElement = -1;
 
-module.exports = majorityElement
+  for (const k of countingNumbers.keys()) {
+    if (countingNumbers.get(k) === maxCount) {
+      majorityElement = k;
+    }
+  }
+
+  return majorityElement;
+};
+
+module.exports = majorityElement;

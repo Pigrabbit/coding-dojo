@@ -1,20 +1,20 @@
 const maxArea = (heights) => {
-    let max = 0
-    let head = 0
-    let tail = heights.length - 1
+  let max = 0;
+  let head = 0;
+  let tail = heights.length - 1;
 
-    while (head < tail) {
-        let tmp = Math.min(heights[head], heights[tail]) * (tail - head)
-        max = Math.max(max, tmp)
+  while (head < tail) {
+    const tmp = Math.min(heights[head], heights[tail]) * (tail - head);
+    max = Math.max(max, tmp);
 
-        if (heights[head] < heights[tail]) {
-            head ++
-        } else {
-            tail --
-        }
+    if (heights[head] < heights[tail]) {
+      head++;
+    } else {
+      tail--;
     }
+  }
 
-    return max
-}
+  return max;
+};
 
-module.exports = maxArea
+module.exports = maxArea;

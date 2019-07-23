@@ -9,28 +9,28 @@
  * @param {TreeNode} root
  * @return {string[]}
  */
-const binaryTreePaths = root => {
-    const result = []
+const binaryTreePaths = (root) => {
+  const result = [];
 
-    const traverse = (node, str) => {
-        if (!node) {
-            return
-        }
-        if (!node.left && !node.right) {
-            // leaf node
-            result.push(str + node.val)
-        }
-        if (node.left) {
-            traverse(node.left, str + node.val + '->')
-        }
-        if (node.right) {
-            traverse(node.right, str + node.val + '->')
-        }
+  const traverse = (node, str) => {
+    if (!node) {
+      return;
     }
+    if (!node.left && !node.right) {
+      // leaf node
+      result.push(str + node.val);
+    }
+    if (node.left) {
+      traverse(node.left, `${str + node.val}->`);
+    }
+    if (node.right) {
+      traverse(node.right, `${str + node.val}->`);
+    }
+  };
 
-    traverse(root, "")
+  traverse(root, '');
 
-    return result
-}
+  return result;
+};
 
-module.exports = binaryTreePaths
+module.exports = binaryTreePaths;
