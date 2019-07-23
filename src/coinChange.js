@@ -13,7 +13,6 @@ const coinChange = (coins, amount) => {
             if (amountIter - coins[coinsIter] >= 0) {
                 numCoins[amountIter] = Math.min(numCoins[amountIter - coins[coinsIter]] + 1, numCoins[amountIter])
             }
-            console.log(numCoins)
         }
     }
 
