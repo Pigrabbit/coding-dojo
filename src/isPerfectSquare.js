@@ -3,22 +3,22 @@
  * @return {boolean}
  */
 const isPerfectSquare = (num) => {
-  let low = 0;
-  let high = num;
+  let low = 0
+  let high = num
 
   while (low <= high) {
-    const mid = Math.floor((low + high) / 2);
+    const mid = Math.floor((low + high) / 2)
 
     if (mid * mid === num) {
-      return true;
+      return true
     } if (mid * mid > num) {
-      high = mid - 1;
+      high = mid - 1
     } else {
-      low = mid + 1;
+      low = mid + 1
     }
   }
 
-  return false;
-};
+  return false
+}
 
-module.exports = isPerfectSquare;
+module.exports = isPerfectSquare

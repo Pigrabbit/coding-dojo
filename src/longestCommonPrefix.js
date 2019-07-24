@@ -17,55 +17,55 @@
  */
 
 const longestCommonPrefix = (strs) => {
-  const shortestLength = shortestWordLength(strs);
+  const shortestLength = shortestWordLength(strs)
   if (shortestLength === 0) {
-    return '';
+    return ''
   }
 
-  let resultPrefix = '';
-  const strArrays = [];
+  let resultPrefix = ''
+  const strArrays = []
   strs.forEach((str) => {
-    strArrays.push(str.split(''));
-  });
+    strArrays.push(str.split(''))
+  })
 
   for (let i = 0; i < shortestLength; i++) {
     if (!hasCommon((strArrays))) {
-      break;
+      break
     }
-    resultPrefix += strArrays[0][0];
+    resultPrefix += strArrays[0][0]
 
     strArrays.forEach((strArray) => {
-      strArray.shift();
-    });
+      strArray.shift()
+    })
   }
 
-  return resultPrefix;
-};
+  return resultPrefix
+}
 
 const shortestWordLength = (strs) => {
-  const lengths = [];
+  const lengths = []
   strs.forEach((strs) => {
-    lengths.push(strs.length);
-  });
+    lengths.push(strs.length)
+  })
 
-  return lengths.sort()[0];
-};
+  return lengths.sort()[0]
+}
 
 const hasCommon = (strArrays) => {
-  const prefixArray = [];
-  const numberOfStr = strArrays.length;
+  const prefixArray = []
+  const numberOfStr = strArrays.length
 
   strArrays.forEach((strArray) => {
-    prefixArray.push(strArray[0]);
-  });
+    prefixArray.push(strArray[0])
+  })
 
   for (let i = 0; i < numberOfStr - 1; i++) {
     if (prefixArray[i] !== prefixArray[i + 1]) {
-      return false;
+      return false
     }
   }
 
-  return true;
-};
+  return true
+}
 
-module.exports = longestCommonPrefix;
+module.exports = longestCommonPrefix

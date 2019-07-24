@@ -4,17 +4,17 @@
  */
 const grayCode = (n) => {
   if (n === 0) {
-    return [0];
+    return [0]
   }
 
-  const bitArray = [];
+  const bitArray = []
   for (let i = 0; i < 2 ** n; i++) {
-    bitArray.push(i);
+    bitArray.push(i)
   }
 
-  const grayCodeArray = bitArray.map(number => number ^ (number >> 1));
+  const grayCodeArray = bitArray.map(number => number ^ (number >> 1))
 
-  return grayCodeArray;
-};
+  return grayCodeArray
+}
 
-module.exports = grayCode;
+module.exports = grayCode

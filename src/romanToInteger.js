@@ -1,61 +1,61 @@
 const romanToInteger = (romanNum) => {
-  let returnInteger = 0;
-  const romanArray = romanNum.split('');
+  let returnInteger = 0
+  const romanArray = romanNum.split('')
 
   while (romanArray.length) {
-    const leftMostRoman = romanArray.shift();
+    const leftMostRoman = romanArray.shift()
 
     switch (leftMostRoman) {
       case 'M':
-        returnInteger += 1000;
-        break;
+        returnInteger += 1000
+        break
       case 'D':
-        returnInteger += 500;
-        break;
+        returnInteger += 500
+        break
       case 'C':
         if (romanArray[0] === 'M') {
-          returnInteger += 900;
-          romanArray.shift();
+          returnInteger += 900
+          romanArray.shift()
         } else if (romanArray[0] === 'D') {
-          returnInteger += 400;
-          romanArray.shift();
+          returnInteger += 400
+          romanArray.shift()
         } else {
-          returnInteger += 100;
+          returnInteger += 100
         }
-        break;
+        break
       case 'L':
-        returnInteger += 50;
-        break;
+        returnInteger += 50
+        break
       case 'X':
         if (romanArray[0] === 'C') {
-          returnInteger += 90;
-          romanArray.shift();
+          returnInteger += 90
+          romanArray.shift()
         } else if (romanArray[0] === 'L') {
-          returnInteger += 40;
-          romanArray.shift();
+          returnInteger += 40
+          romanArray.shift()
         } else {
-          returnInteger += 10;
+          returnInteger += 10
         }
-        break;
+        break
       case 'V':
-        returnInteger += 5;
-        break;
+        returnInteger += 5
+        break
       case 'I':
         if (romanArray[0] === 'X') {
-          returnInteger += 9;
-          romanArray.shift();
+          returnInteger += 9
+          romanArray.shift()
         } else if (romanArray[0] === 'V') {
-          returnInteger += 4;
-          romanArray.shift();
+          returnInteger += 4
+          romanArray.shift()
         } else {
-          returnInteger += 1;
+          returnInteger += 1
         }
-        break;
+        break
     }
   }
 
-  return returnInteger;
-};
+  return returnInteger
+}
 
 
-module.exports = romanToInteger;
+module.exports = romanToInteger
