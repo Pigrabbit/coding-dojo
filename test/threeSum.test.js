@@ -11,30 +11,30 @@
 *    ]
 */
 
-const threeSum = require('../src/threeSum');
+const threeSum = require('../src/threeSum')
 
 describe('threeSum', () => {
   describe('with input which contains zero', () => {
-    const nums = [-2, -1, 0, 1, 2];
+    const nums = [-2, -1, 0, 1, 2]
 
     it('returns sets which includes zero and numbers that have identical abs values as well', () => {
-      expect(threeSum(nums)).toEqual([[-2, 0, 2], [-1, 0, 1]]);
-    });
-  });
+      expect(threeSum(nums)).toEqual([[-2, 0, 2], [-1, 0, 1]])
+    })
+  })
 
   describe('with input which contains two negatives and one positive set', () => {
-    const nums = [-2, -1, 0, 3];
+    const nums = [-2, -1, 0, 3]
 
     it('returns sets which includes two negatives and one positive', () => {
-      expect(threeSum(nums)).toEqual([[-2, -1, 3]]);
-    });
-  });
+      expect(threeSum(nums)).toEqual([[-2, -1, 3]])
+    })
+  })
 
   describe('with input which contains two positives and one negative set', () => {
-    const nums = [-2, 0, 1, 1];
+    const nums = [-2, 0, 1, 1]
 
     it('returns sets which includes two positives and one negative', () => {
-      expect(threeSum(nums)).toEqual([[1, 1, -2]]);
-    });
-  });
-});
+      expect(threeSum(nums)).toEqual([[1, 1, -2]])
+    })
+  })
+})

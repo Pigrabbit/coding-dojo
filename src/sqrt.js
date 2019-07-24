@@ -4,25 +4,25 @@
  */
 const mySqrt = (x) => {
   if (x < 1) {
-    return 0;
+    return 0
   }
 
-  let low = 1;
-  let mid = 0;
-  let high = x;
+  let low = 1
+  let mid = 0
+  let high = x
 
   while (low + 1 < high) {
-    mid = Math.floor((high + low) / 2);
+    mid = Math.floor((high + low) / 2)
 
     if (mid * mid > x) {
-      high = mid;
+      high = mid
     } else if (mid * mid < x) {
-      low = mid;
+      low = mid
     } else {
-      return mid;
+      return mid
     }
   }
-  return low;
-};
+  return low
+}
 
-module.exports = mySqrt;
+module.exports = mySqrt

@@ -16,10 +16,11 @@
         "ecmaVersion": 2018
     },
     "rules": {
+        "semi": ["error", "never"],
         "no-plusplus": "off",
         "no-bitwise": "off",
         "no-underscore-dangle": "off",
         "no-param-reassign": "warn",
-        "no-use-before-define": "warn"
+        "no-use-before-define": "off"
     }
 }
