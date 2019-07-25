@@ -1,5 +1,5 @@
 const binaryTreePaths = require('../src/binaryTreePath')
-const TreeNode = require('../src/treeNode')
+const TreeNode = require('../src/binaryTreeNode')
 
 describe('binaryTreePaths', () => {
   describe('with only root node', () => {
