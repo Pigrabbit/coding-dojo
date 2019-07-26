@@ -1,7 +1,7 @@
 const intMax = Math.pow(2, 31) - 1
 const intMin = -1 * Math.pow(2, 31)
 
-const reverseInterger = (num) => {
+const reverseInteger = (num) => {
   if (!inRange(num)) {
     return 0
   }
@@ -34,4 +34,4 @@ const checkOverflow = (num) => {
   return num
 }
 
-module.exports = reverseInterger
+module.exports = reverseInteger

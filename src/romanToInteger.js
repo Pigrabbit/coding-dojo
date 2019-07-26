@@ -1,61 +1,30 @@
 const romanToInteger = (romanNum) => {
-  let returnInteger = 0
-  const romanArray = romanNum.split('')
+  const dictionary = {
+    M: 1000,
+    D: 500,
+    C: 100,
+    L: 50,
+    X: 10,
+    V: 5,
+    I: 1,
+  }
 
-  while (romanArray.length) {
-    const leftMostRoman = romanArray.shift()
+  let i = romanNum.length - 1
+  let result = dictionary[romanNum[i]]
 
-    switch (leftMostRoman) {
-      case 'M':
-        returnInteger += 1000
-        break
-      case 'D':
-        returnInteger += 500
-        break
-      case 'C':
-        if (romanArray[0] === 'M') {
-          returnInteger += 900
-          romanArray.shift()
-        } else if (romanArray[0] === 'D') {
-          returnInteger += 400
-          romanArray.shift()
-        } else {
-          returnInteger += 100
-        }
-        break
-      case 'L':
-        returnInteger += 50
-        break
-      case 'X':
-        if (romanArray[0] === 'C') {
-          returnInteger += 90
-          romanArray.shift()
-        } else if (romanArray[0] === 'L') {
-          returnInteger += 40
-          romanArray.shift()
-        } else {
-          returnInteger += 10
-        }
-        break
-      case 'V':
-        returnInteger += 5
-        break
-      case 'I':
-        if (romanArray[0] === 'X') {
-          returnInteger += 9
-          romanArray.shift()
-        } else if (romanArray[0] === 'V') {
-          returnInteger += 4
-          romanArray.shift()
-        } else {
-          returnInteger += 1
-        }
-        break
+
+  for (i; i > 0; i--) {
+    const current = dictionary[romanNum[i]]
+    const prev = dictionary[romanNum[i - 1]]
+
+    if (prev >= current) {
+      result += prev
+    } else {
+      result -= prev
     }
   }
 
-  return returnInteger
+  return result
 }
-
 
 module.exports = romanToInteger
