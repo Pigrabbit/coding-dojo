@@ -29,13 +29,12 @@ class Graph {
 
       if (currentVertex === toVertex) {
         return true
-      } else {
-        let verticesToVisit = Object.keys(this._graphDict[currentVertex].edges)
-        verticesToVisit = verticesToVisit.filter(vertex => !seen[vertex])
+      }
+      let verticesToVisit = Object.keys(this._graphDict[currentVertex].edges)
+      verticesToVisit = verticesToVisit.filter(vertex => !seen[vertex])
 
-        while (verticesToVisit.length > 0) {
-          start.push(verticesToVisit.pop())
-        }
+      while (verticesToVisit.length > 0) {
+        start.push(verticesToVisit.pop())
       }
     }
     return false
