@@ -9,18 +9,15 @@
     ]
   },
   "scripts": {
-    "test": "jest",
-    "lint": "eslint . --fix"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "babel-jest": "^24.8.0",
-    "jest": "^24.8.0"
-  },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.2"
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
+    "babel-jest": "^27.1.1",
+    "jest": "^27.1.1"
   }
 }

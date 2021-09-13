@@ -18,7 +18,7 @@ const reverseInteger = (num) => {
   return checkOverflow(result)
 }
 
-const reverseString = string => string.split('').reverse().join('')
+const reverseString = (string) => string.split('').reverse().join('')
 
 const inRange = (num) => {
   if (num > intMax || num < intMin) {

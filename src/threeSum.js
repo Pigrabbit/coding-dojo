@@ -47,13 +47,13 @@ const threeSum = (nums) => {
 
 const getThreeSumSet = (twoNumSet, oppositeNums) => {
   let sum = 0
-  twoNumSet.forEach(num => sum += num)
+  twoNumSet.forEach((num) => sum += num)
   const newThreeSumSet = []
 
   const hasOppositePair = oppositeNums.includes(-1 * sum)
   if (hasOppositePair) {
     const indexOfPair = oppositeNums.indexOf(-1 * sum)
-    twoNumSet.forEach(num => newThreeSumSet.push(num))
+    twoNumSet.forEach((num) => newThreeSumSet.push(num))
     newThreeSumSet.push(oppositeNums[indexOfPair])
 
     return newThreeSumSet
@@ -61,9 +61,9 @@ const getThreeSumSet = (twoNumSet, oppositeNums) => {
 }
 
 const divideBySign = (nums) => {
-  const negatives = nums.filter(num => num < 0)
-  const zeros = nums.filter(num => num === 0)
-  const positives = nums.filter(num => num > 0)
+  const negatives = nums.filter((num) => num < 0)
+  const zeros = nums.filter((num) => num === 0)
+  const positives = nums.filter((num) => num > 0)
 
   return {
     negatives,

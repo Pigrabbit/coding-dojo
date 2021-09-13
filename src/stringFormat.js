@@ -6,7 +6,7 @@ const stringFormat = (formatString, args) => {
   }
 
   for (let i = 0; i < args.length; i++) {
-    const reg = new RegExp('\{([' + i.toString() + '])\}', 'g')
+    const reg = new RegExp(`\{([${i.toString()}])\}`, 'g')
     resultString = resultString.replace(reg, args[i])
   }
 

@@ -1,4 +1,5 @@
-const Vertex = require('../src/vertex')
+// const Vertex = require('../src/vertex')
+import Vertex from '../src/vertex'
 
 describe('Vertex', () => {
   describe('getter Edge', () => {

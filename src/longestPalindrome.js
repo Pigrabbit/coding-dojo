@@ -29,5 +29,4 @@ const isPalindromic = (left, right, s) => s[left] && s[right]
 
 const isTheLongest = (left, right, longest) => (right - left - 1) > longest.length
 
-
 module.exports = longestPalindrome

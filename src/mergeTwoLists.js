@@ -40,5 +40,4 @@ const mergeTwoLists = (list1, list2) => {
   return mergedList
 }
 
-
 module.exports = mergeTwoLists

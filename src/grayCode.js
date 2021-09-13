@@ -12,7 +12,7 @@ const grayCode = (n) => {
     bitArray.push(i)
   }
 
-  const grayCodeArray = bitArray.map(number => number ^ (number >> 1))
+  const grayCodeArray = bitArray.map((number) => number ^ (number >> 1))
 
   return grayCodeArray
 }

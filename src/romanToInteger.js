@@ -12,7 +12,6 @@ const romanToInteger = (romanNum) => {
   let i = romanNum.length - 1
   let result = dictionary[romanNum[i]]
 
-
   for (i; i > 0; i--) {
     const current = dictionary[romanNum[i]]
     const prev = dictionary[romanNum[i - 1]]
