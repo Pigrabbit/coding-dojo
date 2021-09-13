@@ -9,8 +9,8 @@
     ]
   },
   "scripts": {
-    "test": "./node_modules/.bin/jest",
-    "lint": "./node_modules/.bin/eslint . --fix"
+    "test": "jest",
+    "lint": "eslint . --fix"
   },
   "author": "",
   "license": "ISC",
